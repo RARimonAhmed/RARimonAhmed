@@ -1,60 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXSlider?>
-<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="713.0" style="-fx-background-color: #c870ee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="audio_player.FXMLDocumentController">
+<AnchorPane fx:id="MainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banking_management_system1.FXMLDocumentController">
    <children>
-      <VBox alignment="CENTER" layoutY="-6.0" prefHeight="66.0" prefWidth="713.0" style="-fx-background-color: #e7a1a1;">
+      <VBox fx:id="LogInVbox" alignment="TOP_CENTER" layoutX="6.0" layoutY="6.0" prefHeight="195.0" prefWidth="481.0" spacing="2.0">
          <children>
-            <Label prefHeight="47.0" prefWidth="402.0" text="Music Player in Java FX" textFill="#991bcc">
+            <ImageView fx:id="LogInImage" fitHeight="82.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/2.jpg" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="LogInAccountNumberText" alignment="CENTER" prefHeight="25.0" prefWidth="420.0" promptText="Account Number" unFocusColor="#d35353">
                <font>
-                  <Font name="Bell MT" size="38.0" />
+                  <Font name="Bell MT" size="16.0" />
                </font>
-            </Label>
+            </JFXTextField>
+            <JFXPasswordField fx:id="LogInPasswordField" alignment="CENTER" prefHeight="29.0" prefWidth="481.0" promptText="Password" unFocusColor="#16dbd5">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="LogInbtn" buttonType="RAISED" onAction="#LogInbtn" prefHeight="39.0" prefWidth="90.0" ripplerFill="#1f2adb" style="-fx-background-color: #b56add;" text="Log In" textFill="#374fdb">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </VBox>
-      <Label fx:id="TitleLabel" layoutX="2.0" layoutY="69.0" prefHeight="47.0" prefWidth="703.0" textFill="#4319cd">
+      <JFXButton fx:id="LogIn" buttonType="RAISED" layoutX="50.0" layoutY="208.0" onAction="#LogIn" ripplerFill="#65eb56" text="Log In" textFill="#dd3636">
          <font>
-            <Font name="Bell MT" size="25.0" />
-         </font>
-      </Label>
-      <JFXButton fx:id="PlayButton" buttonType="RAISED" layoutX="11.0" layoutY="133.0" onAction="#PlayButton" ripplerFill="#ee0b53" style="-fx-background-color: #84c3da; -fx-border-color: #d3ea24; -fx-border-width: 2;" text="Play" textFill="#e5104b">
-         <font>
-            <Font name="Elephant" size="25.0" />
+            <Font name="Bell MT" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="NextButton" buttonType="RAISED" layoutX="448.0" layoutY="133.0" onAction="#NextButton" ripplerFill="#ee0b53" style="-fx-background-color: #84c3da; -fx-border-color: #d3ea24; -fx-border-width: 2;" text="Next" textFill="#e5104b">
+      <JFXButton fx:id="Create" buttonType="RAISED" layoutX="271.0" layoutY="211.0" onAction="#Create" ripplerFill="#65eb56" text="Create Account" textFill="#dd3636">
          <font>
-            <Font name="Elephant" size="25.0" />
+            <Font name="Bell MT" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="PreviousButton" buttonType="RAISED" layoutX="275.0" layoutY="133.0" onAction="#PreviousButton" ripplerFill="#ee0b53" style="-fx-background-color: #84c3da; -fx-border-color: #d3ea24; -fx-border-width: 2;" text="Previous" textFill="#e5104b">
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <JFXListView fx:id="listimage" prefHeight="159.0" prefWidth="73.0" />
+         </children></VBox>
+      <AnchorPane fx:id="CreateAnchorpane" prefHeight="200.0" prefWidth="492.0" visible="false">
+         <children>
+            <ImageView fx:id="CreateAccountImage" fitHeight="82.0" fitWidth="100.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/FB_IMG_15880089266230457.jpg" />
+               </image>
+            </ImageView>
+            <JFXTextArea layoutX="4.0" prefHeight="200.0" prefWidth="492.0" visible="false" />
+            <JFXTextField fx:id="CreateNameField" alignment="CENTER" layoutX="95.0" layoutY="8.0" prefHeight="25.0" prefWidth="155.0" promptText="Name" unFocusColor="#e44141" />
+            <JFXTextField fx:id="CreatePhone" alignment="CENTER" layoutX="315.0" layoutY="8.0" prefHeight="25.0" prefWidth="155.0" promptText="Phone" unFocusColor="#e44141" />
+            <JFXTextField fx:id="CreateEmail" alignment="CENTER" layoutX="95.0" layoutY="48.0" prefHeight="25.0" prefWidth="155.0" promptText="Email" unFocusColor="#e44141" />
+            <JFXTextField fx:id="CreateAddress" alignment="CENTER" layoutX="315.0" layoutY="48.0" prefHeight="25.0" prefWidth="155.0" promptText="Address" unFocusColor="#e44141" />
+            <JFXTextField fx:id="CreateAccountNumber" alignment="CENTER" layoutX="17.0" layoutY="127.0" prefHeight="25.0" prefWidth="133.0" promptText="Account Number" unFocusColor="#e44141" />
+            <JFXTextField fx:id="CreateAccountType" alignment="CENTER" layoutX="177.0" layoutY="127.0" prefHeight="25.0" prefWidth="142.0" promptText="Account Type" unFocusColor="#e44141" />
+            <JFXTextField fx:id="CreateReligion" alignment="CENTER" layoutX="328.0" layoutY="127.0" prefHeight="25.0" prefWidth="142.0" promptText="Religion" unFocusColor="#e44141" />
+            <JFXButton fx:id="CreateAccount" buttonType="RAISED" layoutX="197.0" layoutY="159.0" onAction="#CreateAccount" ripplerFill="#65eb56" text="Create Account" textFill="#dd3636">
+               <font>
+                  <Font name="Bell MT" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="CreatePassword" alignment="CENTER" layoutX="95.0" layoutY="92.0" prefHeight="25.0" prefWidth="155.0" promptText="Password" unFocusColor="#28f72b" />
+            <JFXTextField fx:id="CreateDepositeBalance" alignment="CENTER" layoutX="326.0" layoutY="88.0" prefHeight="25.0" prefWidth="155.0" promptText="Deposite Balance" unFocusColor="#e44141" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="ImageChoose" buttonType="RAISED" layoutX="97.0" layoutY="44.0" onAction="#ImageChoose" prefHeight="22.0" prefWidth="70.0" ripplerFill="#1f2adb" style="-fx-background-color: #b56add;" text="Choose" textFill="#374fdb">
          <font>
-            <Font name="Elephant" size="25.0" />
+            <Font name="Bell MT" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="StopButton" buttonType="RAISED" layoutX="137.0" layoutY="133.0" onAction="#StopButton" ripplerFill="#ee0b53" style="-fx-background-color: #84c3da; -fx-border-color: #d3ea24; -fx-border-width: 2;" text="Pause" textFill="#e5104b">
-         <font>
-            <Font name="Elephant" size="25.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="Openbtn" buttonType="RAISED" layoutX="565.0" layoutY="133.0" onAction="#Openbtn" ripplerFill="#ee0b53" style="-fx-background-color: #84c3da; -fx-border-color: #d3ea24; -fx-border-width: 2;" text="Open" textFill="#e5104b">
-         <font>
-            <Font name="Elephant" size="25.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="ResetButton" buttonType="RAISED" layoutX="61.0" layoutY="199.0" onAction="#ResetButton" ripplerFill="#ee0b53" style="-fx-background-color: #84c3da; -fx-border-color: #d3ea24; -fx-border-width: 2;" text="Reset" textFill="#e5104b">
-         <font>
-            <Font name="Elephant" size="25.0" />
-         </font>
-      </JFXButton>
-      <JFXComboBox fx:id="Speed" focusColor="#26d173" labelFloat="true" layoutX="546.0" layoutY="214.0" onAction="#Speed" prefHeight="25.0" prefWidth="130.0" promptText="Speed" style="-fx-background-color: red;" unFocusColor="#a82b2b" />
-      <JFXSlider fx:id="SoundSlider" layoutX="199.0" layoutY="213.0" minorTickCount="5" onDragDetected="#SoundSlider" prefHeight="37.0" prefWidth="298.0" showTickLabels="true" showTickMarks="true" value="10.0" />
    </children>
 </AnchorPane>
