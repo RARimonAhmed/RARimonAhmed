@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="282.0" prefWidth="322.0" style="-fx-background-color: green; -fx-border-color: red; -fx-border-width: 5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="create.AddController">
+   <children>
+      <Label layoutX="18.0" layoutY="68.0" style="-fx-background-color: yellow;" text="First Number" textFill="#f23232">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="116.0" style="-fx-background-color: yellow;" text="Second Number" textFill="#f23232">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt1" layoutX="152.0" layoutY="70.0" prefHeight="26.0" prefWidth="137.0" />
+      <TextField fx:id="txt2" layoutX="162.0" layoutY="115.0" prefHeight="26.0" prefWidth="129.0" />
+      <TextField fx:id="txt3" layoutX="155.0" layoutY="221.0" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="Result" layoutX="46.0" layoutY="231.0" text="Result" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="140.0" layoutY="165.0" mnemonicParsing="false" onAction="#Addition" prefHeight="40.0" prefWidth="79.0" text="Addition" textFill="#ee2525">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="240.0" layoutY="170.0" mnemonicParsing="false" onAction="#Clear" style="-fx-background-color: #2635eb;" text="Clear" textFill="#10e31a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
